@@ -1,4 +1,3 @@
-'use client'
 import LiveTimestamp from "./LiveTimestamp"
 import ReadMoreButton from "./ReadMoreButton"
 

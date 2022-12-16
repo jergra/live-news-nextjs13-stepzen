@@ -43,7 +43,7 @@ const fetchNews = async (
     const res = await fetch('https://eastdonegal.stepzen.net/api/newsapp/__graphql', {
         method: 'POST',
         cache: isDynamic ? "no-cache" : "default",
-        next: isDynamic ? {revalidate: 0} : {revalidate: 40},
+        next: isDynamic ? {revalidate: 0} : {revalidate: 300},
         headers: {
             "Content-Type": "application/json",
             Authorization: `Apikey ${process.env.STEPZEN_API_KEY}`

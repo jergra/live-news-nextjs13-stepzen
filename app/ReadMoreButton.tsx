@@ -1,6 +1,6 @@
 'use client'
 
-//import Link from "next/link"
+import Link from "next/link"
 
 import { useRouter } from "next/navigation"
 
@@ -22,13 +22,13 @@ function ReadMoreButton({article}: Props) {
   
     return (
         <button 
-            onClick={handleClick}
+            //onClick={handleClick}
             className='bg-orange-400 h-18 rounded-b-lg dark:text-gray-900 font-medium
                 hover:bg-orange-500'
         >
-            {/* <Link href={article.url} target='_blank'> */}
+            <Link href={article.url} target='_blank'>
                 Read More
-            {/* </Link> */}
+            </Link>
         </button>
   )
 }

@@ -1,4 +1,4 @@
-dec 14, 2022
+Dec 14, 2022
 
 C:/dev/live-news-nextjs13-stepzen
 

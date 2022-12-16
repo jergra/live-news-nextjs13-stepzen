@@ -43,7 +43,7 @@ const fetchNews = async (
     const res = await fetch('https://eastdonegal.stepzen.net/api/newsapp/__graphql', {
         method: 'POST',
         cache: isDynamic ? "no-cache" : "default",
-        next: isDynamic ? {revalidate: 0} : {revalidate: 20},
+        next: isDynamic ? {revalidate: 0} : {revalidate: 40},
         headers: {
             "Content-Type": "application/json",
             Authorization: `Apikey ${process.env.STEPZEN_API_KEY}`
@@ -59,15 +59,15 @@ const fetchNews = async (
     }
     )
 
-    // console.log(
-    //     "LOADING NEW DATA FROM API for category >>>",
-    //     category,
-    //     keywords
-    // )
+    console.log(
+        "LOADING NEW DATA FROM API for category >>>",
+        category,
+        keywords
+    )
 
     const newsResponse = await res.json()
 
-    //console.log("newsResponse:", newsResponse)
+    console.log("newsResponse:", newsResponse)
 
     const news = sortNewsByImage(newsResponse.data.myQuery)
 

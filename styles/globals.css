@@ -14,4 +14,9 @@
         @apply text-4xl font-serif capitalize px-10 pt-5 underline
         decoration-orange-400 decoration-2 underline-offset-4 decoration-double;
     }
+
+    .headerTitleSearch {
+        @apply text-4xl font-serif px-10 pt-5 underline
+        decoration-orange-400 decoration-2 underline-offset-4 decoration-double;
+    }
 }

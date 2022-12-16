@@ -14,7 +14,7 @@ async function SearchPage({searchParams}: Props) {
     
     return (
         <div>
-            <h1 className='headerTitle'>
+            <h1 className='headerTitleSearch'>
                 search results for: {searchParams?.term}
             </h1>
             

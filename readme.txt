@@ -1,4 +1,4 @@
-dec 14, 2022
+dec 16, 2022
 
 C:/dev/live-news-nextjs13-stepzen
 
@@ -11,19 +11,22 @@ from tutorial:
 local start:
     npm run dev
 
-the local version has issues
+deployed:
+    https://live-news-nextjs13-stepzen.vercel.app
 
-It was deployed to vercel. The deploy is not working properly.
+    In this deployed version, the 'Read More' button doesn't 
+    work properly, so I used 'Link' to send the user directly 
+    to the article.
 
-I cloned another person's build:
+a clone of another person's build was put here:
     C:/dev/live-news
 
-this build also has issues
+nextjs 13 is still in beta and seems a little buggy
 
-nextjs 13 is still in beta and seems buggy
+mediastack's free tier quota for the month is quickly used up, 
+see .env.local
 
-I await the arrival on github of other versions of this project.
-What we need is github code that includes a properly working deploy.
+
 
 
 

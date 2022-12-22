@@ -18,6 +18,11 @@ deployed:
     work properly, so I used 'Link' to send the user directly 
     to the article.
 
+update:
+    git add .
+    git commit -m 'message'
+    git push
+
 a clone of another person's build was put here:
     C:/dev/live-news
 

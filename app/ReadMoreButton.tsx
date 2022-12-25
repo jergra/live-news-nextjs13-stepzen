@@ -23,12 +23,14 @@ function ReadMoreButton({article}: Props) {
     return (
         <button 
             //onClick={handleClick}
-            className='bg-orange-400 h-18 rounded-b-lg dark:text-gray-900 font-medium
+            className='flex justify-items-center items-center bg-orange-400 h-18 rounded-b-lg dark:text-gray-900 font-medium
                 hover:bg-orange-500'
         >
-            <Link href={article.url} target='_blank'>
-                Read More
-            </Link>
+            <div>
+                <Link href={article.url} target='_blank'>
+                    Read More
+                </Link>
+            </div>
         </button>
   )
 }

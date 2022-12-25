@@ -18,7 +18,7 @@ function DarkModeButton() {
     const currentTheme = theme === 'system' ? systemTheme : theme
     
     return (
-        <div>
+        <div className="mr-[20px]">
             {currentTheme === 'dark' ? (
                 <SunIcon
                     className='h-8 w-8 cursor-pointer text-yellow-500'

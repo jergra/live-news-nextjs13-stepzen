@@ -17,7 +17,7 @@ const fetchNews = async (
                 categories: $categories
                 countries: "ca,fr,us,gb"
                 sort: "published_desc"
-                limit: "12"
+                limit: "9"
                 keywords: $keywords
             ) {
                 data {

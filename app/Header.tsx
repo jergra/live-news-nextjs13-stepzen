@@ -45,7 +45,7 @@ function Header() {
                     target='_blank'
                     rel='noreferrer'
                     className={classNames(
-                      active ? 'bg-gray-900 text-orange-400' : 'text-orange-400',
+                      active ? 'text-orange-400' : 'text-orange-400',
                       'block'
                     )}
                   >

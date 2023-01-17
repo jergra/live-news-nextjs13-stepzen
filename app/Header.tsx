@@ -1,14 +1,63 @@
+'use client'
+import { Fragment } from 'react'
+import { Menu, Transition } from '@headlessui/react'
+import {AiFillGithub} from 'react-icons/ai'
+
 import {Bars3Icon} from '@heroicons/react/24/solid'
 import Link from 'next/link'
 import DarkModeButton from './DarkModeButton'
 import NavLinks from './NavLinks'
 import SearchBox from './SearchBox'
 
+
 function Header() {
+
+  function classNames(...classes: any) {
+    return classes.filter(Boolean).join(' ')
+  }
+
   return (
     <header>
     <div className='grid grid-cols-3 p-10 items-center'>
-        <Bars3Icon className='h-8 w-8 cursor-pointer' />
+
+      <Menu as="div" className="relative inline-block text-left">
+        <div>
+          <Menu.Button>
+            <Bars3Icon className='h-8 w-8 cursor-pointer' />
+          </Menu.Button>
+        </div>
+
+        <Transition
+          as={Fragment}
+          enter="transition ease-out duration-100"
+          enterFrom="transform opacity-0 scale-95"
+          enterTo="transform opacity-100 scale-100"
+          leave="transition ease-in duration-75"
+          leaveFrom="transform opacity-100 scale-100"
+          leaveTo="transform opacity-0 scale-95"
+        >
+          <Menu.Items className="absolute left-0 z-10">
+            <div>
+              <Menu.Item>
+                {({ active }: any) => (
+                  <a
+                    href="https://github.com/jergra/live-news-nextjs13-stepzen"
+                    target='_blank'
+                    rel='noreferrer'
+                    className={classNames(
+                      active ? 'bg-gray-900 text-orange-400' : 'text-orange-400',
+                      'block'
+                    )}
+                  >
+                    <AiFillGithub size={40} />
+                  </a>
+                )}
+              </Menu.Item>
+            </div>
+          </Menu.Items>
+        </Transition>
+      </Menu>
+  
         <Link href='/' prefetch={false}>
             <h1 className='font-serif text-4xl text-center'>
               <div className='flex'>
